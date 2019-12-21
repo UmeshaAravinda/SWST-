@@ -1,9 +1,33 @@
 package com.kln.swst.simplerest.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "swst_student")
 public class Student {
+
+    @Id
+    @GeneratedValue( strategy = GenerationType.AUTO)
+    @Column
+    private long id;
+
+    @Column
     private String Name;
+
+    @Column
     private String address;
+
+    @Column
     private int age;
+
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return Name;
