@@ -19,7 +19,7 @@ public class StudentController {
             return studentRepository.findAll();
     }
 
-    @RequestMapping(value = "/name{name}",method = RequestMethod.GET)
+    @RequestMapping(value = "/name/{name}",method = RequestMethod.GET)
     public List<Student> get(@PathVariable String name)throws IllegalArgumentException{
         return studentRepository.findAllByName(name);
     }
